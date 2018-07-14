@@ -49,8 +49,8 @@ class WebSocketTransport extends EventEmitter {
   }
 
   onOpen() {
-    this.client.rest.endpoint = `http://${this.hostAndPort}`;
-    this.client.rest.versioned = false;
+    this.client.fetch.endpoint = `http://${this.hostAndPort}`;
+    this.client.fetch.versioned = false;
     this.emit('open');
   }
 
